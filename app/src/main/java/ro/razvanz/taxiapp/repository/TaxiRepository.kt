@@ -10,6 +10,10 @@ class TaxiRepository(private val taxiDAO: TaxiDAO) {
         taxiDAO.insert(taxi)
     }
 
+    suspend fun delete(id: Int) {
+        taxiDAO.delete(id)
+    }
+
 //    suspend fun delete(id: Int) {
 //        taxiDAO.delete(id)
 //    }

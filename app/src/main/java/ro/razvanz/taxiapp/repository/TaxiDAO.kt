@@ -14,4 +14,7 @@ interface TaxiDAO {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(taxi: Taxi)
+
+    @Query("delete from taxi where id = :id")
+    suspend fun delete(id: Int)
 }

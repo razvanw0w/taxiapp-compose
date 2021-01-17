@@ -99,7 +99,7 @@ router.get('/my/:driver', ctx => {
 const broadcast = (data) =>
   wss.clients.forEach((client) => {
     if (client.readyState === WebSocket.OPEN) {
-      client.send(JSON.stringify(data));
+      client.send(JSON.stringify(data)); 
     }
   });
 
